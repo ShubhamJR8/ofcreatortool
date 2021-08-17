@@ -1,0 +1,18 @@
+/* ////////////////////////////////////////current //////////////////////////// */
+
+.blog-post__img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+.fade {
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    background-color: #d4ba6a;
+}
+
+/* /////////////////////future///////////////////////// */
+

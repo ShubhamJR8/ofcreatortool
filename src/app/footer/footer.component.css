@@ -1,0 +1,32 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+#jegeh {
+  flex: 1 1 auto;
+  margin: 40px;
+}
+
+/* section {
+  display: table;
+  margin: auto;
+  text-align: center;
+}
+
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 42px 8px 8px 0px;
+} */
+
+.mat-raised-button {
+  color: indigo !important;
+  flex: 1 1 auto;
+}
+
+.text-center {
+  flex: 1 1 auto;
+}
