@@ -1,0 +1,131 @@
+<section class="section bg-light" id="contact">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="title text-center mb-5">
+          <h3 class="font-weight-bold text-dark">Get In <span class="text-warning">Touch</span></h3>
+          <p class="text-muted">Its always a pleasure to serve you</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="contact-address">
+          <h4 class="text-dark mb-4">Contact Info</h4>
+          <p class="text-muted f-15">Sales query lines: <strong>10:00am - 8:00pm IST (Mon-Sat)</strong></p>
+          <p class="text-muted f-15 mb-4">Technical Helpline: <strong>24/7 Support</strong></p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-address">
+              <h5 class="text-dark mb-3 f-16"><strong>Sales</strong></h5>
+              <p class="text-muted f-15"><i class="mdi mdi-phone mr-1"></i><i
+                  class="ion-social-whatsapp ml-1"></i>&nbsp; {{ cntNoSales }}</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="contact-address">
+              <h5 class="text-dark mb-3 f-16"><strong>Technical</strong></h5>
+              <p class="text-muted f-15"><i class="mdi mdi-phone mr-1"></i><i
+                  class="ion-social-whatsapp ml-1"></i>&nbsp; {{ cntNoTech }}</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="contact-address">
+              <h5 class="text-dark f-16"><strong>Follow Us on:</strong></h5>
+              <ul class="list-unstyled follow-social-list mt-4">
+                <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="https://bit.ly/welcome2ecuisine" target="_blank" rel="noopener noreferrer"><i class="mdi mdi-instagram"></i></a></li>
+                <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 offset-lg-1">
+        <div class="custom-form mt-4 mt-lg-0">
+          <div id="message"></div>
+          <form [formGroup]="contactForm" (ngSubmit)="submit()">
+            <div class="row">
+              <div class="col-lg-6 col-sm-10">
+                <div class="form-group app-label">
+                  <label for="name">Name</label>
+                  <input name="name" id="name" type="text" class="form-control" placeholder="Enter your name.." formControlName="name">
+                  <span class="text-danger" id="nameError" *ngIf="!contactForm.controls.name.valid && contactForm.controls.name.dirty">
+                    Enter your name.
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-10">
+                <div class="form-group app-label">
+                  <label for="mobno">Mobile Number</label>
+                  <input name="mobno" id="mobno" type="tel" class="form-control" placeholder="Enter your mobile number.." formControlName="mobno">
+                  <span class="text-danger" id="mobnoError" *ngIf="!contactForm.controls.mobno.valid && contactForm.controls.mobno.dirty">
+                    Enter a valid mobile number.
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-10">
+                <div class="form-group app-label">
+                  <label for="email">Email address</label>
+                  <input name="email" id="email" type="email" class="form-control" placeholder="Enter your email.." formControlName="email">
+                  <span class="text-danger" id="emailError" *ngIf="!contactForm.controls.email.valid && contactForm.controls.email.dirty">
+                    Enter a valid email address.
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-10">
+                <div class="form-group app-label">
+                  <label for="plan">Select Plan</label>
+                  <select name="plan" id="plan" class="form-control" formControlName="plan">
+                    <option value="" disabled selected>Click to select a plan..</option>
+                    <option *ngFor="let plan of plans" [ngValue]="plan">{{plan}}</option>
+                  </select>
+                  <span class="text-danger" id="planError" *ngIf="!contactForm.controls.plan.valid && contactForm.controls.plan.dirty">
+                    Select a plan
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-12 col-sm-10">
+                <div class="form-group app-label">
+                  <label for="subject">Subject</label>
+                  <input name="subject" type="text" class="form-control" id="subject" placeholder="Enter Subject.." formControlName="subject">
+                </div>
+                <span class="text-danger" id="planError" *ngIf="!contactForm.controls.subject.valid && contactForm.controls.subject.dirty">
+                  Enter a subject
+                </span>
+              </div>
+              <div class="col-lg-12 col-sm-10">
+                <div class="form-group app-label">
+                  <label for="comments">Message</label>
+                  <textarea name="comments" id="comments" rows="3" class="form-control"
+                    placeholder="Enter message.." formControlName="comments"></textarea>
+                </div>
+                <span class="text-danger" id="planError" *ngIf="!contactForm.controls.comments.valid && contactForm.controls.comments.dirty">
+                  Enter your message.
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <button type="submit" id="submit" name="send" class="btn btn-warning text-center" [disabled]="contactForm.invalid && contactForm!=null">Send Message</button>
+                <div id="simple-msg"></div>
+              </div>
+            </div>
+          </form>
+          <div *ngIf="successMessage!==''" class="alert alert-success mt-3" role="alert">
+            {{successMessage}}
+          </div>
+          <div *ngIf="errorMessage!==''" class="alert alert-danger mt-3" role="alert">
+            {{errorMessage}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+ngb-accordion::ng-deep.card::ng-deep .btn {
+  text-decoration: none;
+  color: #ff8057;
+  font-weight: 800;
+  font-size: x-large;
+  text-align: left;
+}
+
+ngb-accordion::ng-deep.card::ng-deep .header {
+  background-color: #f2f2f2;
+}
+
+ngb-accordion ::ng-deep .card-header {
+  padding: 0;
+}
+
+ngb-accordion ::ng-deep .card-header button {
+  width: 100%;
+  padding: 1.125rem 2rem;
+  text-decoration: none;
+  text-align: left;
+}
+ngb-accordion ::ng-deep .card-header button:focus {
+  box-shadow: none;
+}
+
+.faqs {
+  overflow-x: hidden;
+}
+
+.faqs .text-custom {
+  color: rgb(131, 131, 131) !important;
+  line-height: 2em;
+  text-align: justify;
+}

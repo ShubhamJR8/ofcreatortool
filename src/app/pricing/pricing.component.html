@@ -1,62 +1,55 @@
-<div class="snip1214" id="middle">
-    <div class="plan">
-      <h3 class="plan-title">
-        Starter
-      </h3>
-      <div class="plan-cost"><span class="plan-price">1999</span><span class="plan-type">/ Monthly</span></div>
-      <ul class="plan-features">
-        <li><i class="ion-checkmark"> </i>Unlimited QR Generator</li>
-        <li><i class="ion-checkmark"> </i>Unlimited Order</li>
-        <li><i class="ion-checkmark"> </i>Endless item Add</li>
-        <li><i class="ion-checkmark"> </i>Unlimited Free Updates</li>
-        <li><i class="ion-checkmark"> </i>24/7 Tech Support</li>
-        <li><i class="ion-checkmark"> </i>Daily Backups</li>
-      </ul>
-      <div class="plan-select"><a href="">Select Plan</a></div>
-    </div>
-    <div class="plan">
-      <h3 class="plan-title">
-        Basic
-      </h3>
-      <div class="plan-cost"><span class="plan-price">3999</span><span class="plan-type">/ 3 Month</span></div>
-      <ul class="plan-features">
-        <li><i class="ion-checkmark"> </i>Unlimited QR Generator</li>
-        <li><i class="ion-checkmark"> </i>Unlimited Order</li>
-        <li><i class="ion-checkmark"> </i>Endless item Add</li>
-        <li><i class="ion-checkmark"> </i>Unlimited Free Updates</li>
-        <li><i class="ion-checkmark"> </i>24/7 Tech Support</li>
-        <li><i class="ion-checkmark"> </i>Daily Backups</li>
-      </ul>
-      <div class="plan-select"><a href="">Select Plan</a></div>
-    </div>
-    <div class="plan featured">
-      <h3 class="plan-title">
-        Professional
-      </h3>
-      <div class="plan-cost"><span class="plan-price">5999</span><span class="plan-type">/ 6 Month</span></div>
-      <ul class="plan-features">
-        <li><i class="ion-checkmark"> </i>Unlimited QR Generator</li>
-        <li><i class="ion-checkmark"> </i>Unlimited Order</li>
-        <li><i class="ion-checkmark"> </i>Endless item Add</li>
-        <li><i class="ion-checkmark"> </i>Unlimited Free Updates</li>
-        <li><i class="ion-checkmark"> </i>24/7 Tech Support</li>
-        <li><i class="ion-checkmark"> </i>Daily Backups</li>
-      </ul>
-      <div class="plan-select"><a href="">Select Plan</a></div>
-    </div>
-    <div class="plan">
-      <h3 class="plan-title">
-        Ultra
-      </h3>
-      <div class="plan-cost"><span class="plan-price">9999</span><span class="plan-type">/ Year</span></div>
-      <ul class="plan-features">
-        <li><i class="ion-checkmark"> </i>Unlimited QR Generator</li>
-        <li><i class="ion-checkmark"> </i>Unlimited Order</li>
-        <li><i class="ion-checkmark"> </i>Endless items Add</li>
-        <li><i class="ion-checkmark"> </i>Unlimited Free Updates</li>
-        <li><i class="ion-checkmark"> </i>24/7 Tech Support</li>
-        <li><i class="ion-checkmark"> </i>Daily Backups</li>
-      </ul>
-      <div class="plan-select"><a href="">Select Plan</a></div>
+<section class="section bg-light" id="pricing">
+  <div class="pricing1">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <div class="title text-center mb-5">
+            <h3 class="font-weight-bold text-dark">Our <span class="text-warning">Pricing</span></h3>
+            <p class="text-muted">Pay Less! Get More! Try for free.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-6" *ngFor="let plan of plans">
+          <div class="card text-center card-shadow on-hover border-0 mb-4">
+            <div class="card-body font-14">
+              <span *ngIf="plan.badge" class="badge badge-inverse p-2 position-absolute price-badge font-weight-normal">{{ plan.badgeDescription }}</span>
+              <h5 class="mt-3 mb-1 font-weight-medium text-custom-color">{{ plan.title }}</h5>
+              <div class="pricing my-3">
+                <sup>₹</sup>
+                <span class="monthly display-5">{{ plan.cost }}</span>
+                <small class="monthly">/{{ plan.duration }}</small>
+                <!-- <span class="d-block">Save <span class="font-weight-medium">$20</span> a Year</span> -->
+              </div>
+              <ul class="list-inline mx-3 my-3 text-left">
+                <li class="d-block py-2"><i class="mr-2"
+                    [ngClass]="plan.features.unlimitedQR ? 'ion-checkmark-round text-success' : 'ion-close-round text-danger'">
+                    &nbsp;</i>Unlimited QR Generator</li>
+                <li class="d-block py-2"><i class="mr-2"
+                    [ngClass]="plan.features.unlimitedOrder ? 'ion-checkmark-round text-success' : 'ion-close-round text-danger'">
+                    &nbsp;</i>Unlimited Order</li>
+                <li class="d-block py-2"><i class="mr-2"
+                    [ngClass]="plan.features.endlessAddItem ? 'ion-checkmark-round text-success' : 'ion-close-round text-danger'">
+                    &nbsp;</i>Endless item Add</li>
+                <li class="d-block py-2"><i class="mr-2"
+                    [ngClass]="plan.features.techSupport ? 'ion-checkmark-round text-success' : 'ion-close-round text-danger'">
+                    &nbsp;</i>24/7 Tech Support</li>
+                <li class="d-block py-2"><i class="mr-2"
+                    [ngClass]="plan.features.unlimitedFreeUpdates ? 'ion-checkmark-round text-success' : 'ion-close-round text-danger'">
+                    &nbsp;</i>Unlimited Free Updates</li>
+                <li class="d-block py-2"><i class="mr-2"
+                    [ngClass]="plan.features.backups ? 'ion-checkmark-round text-success' : 'ion-close-round text-danger'">
+                    &nbsp;</i>Daily Backups</li>
+              </ul>
+              <div class="bottom-btn">
+                <a class="btn btn-light btn-md text-light btn-block" href="#contact" (click)="passPlanName(plan.title)"><span>Choose Plan</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</section>
+<!-- Plans end -->

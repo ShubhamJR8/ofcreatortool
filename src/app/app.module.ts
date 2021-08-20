@@ -1,53 +1,42 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
+import { NgbModule, NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StepsComponent } from './steps/steps.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { LayoutComponent } from './layout/layout.component';
+import { ScrollspyDirective } from './services/scrollspy.directive';
+import { FeaturesComponent } from './features/features.component';
 import { PricingComponent } from './pricing/pricing.component';
-import { FaqsComponent } from './faqs/faqs.component';
-import { DescriptionComponent } from './description/description.component';
+import { FaqComponent } from './faq/faq.component';
+import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { MediaComponent } from './media/media.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StepsComponent,
-    ToolbarComponent,
+    LayoutComponent,
+    ScrollspyDirective,
+    FeaturesComponent,
     PricingComponent,
-    FaqsComponent,
-    DescriptionComponent,
-    FooterComponent,
-    MediaComponent
+    FaqComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatGridListModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatListModule,
-    MatCardModule,
-    MDBBootstrapModule.forRoot(),
-    MatSidenavModule,
-    FlexLayoutModule,
-    
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    NgbAccordionModule,
+    ScrollToModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

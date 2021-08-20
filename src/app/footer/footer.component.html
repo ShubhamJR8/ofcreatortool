@@ -1,18 +1,54 @@
-<mat-toolbar color="primary" >
-    <mat-toolbar-row >
-      <div class="example-button-row" fxFlex fxLayoutAlign="center center">
-        <button id="jegeh" mat-raised-button >About Us</button>
-        <button id="jegeh" mat-raised-button >Contact Us</button>
-        <button id="jegeh" mat-raised-button >Find Us</button>
+<section class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4">
+              <div class="mb-4">
+                  <a href="#home"><img src="assets/logo.jpeg" alt="" class="logo-dark rounded" height="26" /></a>
+                  <p class="text-muted mt-4 mb-2">{{ email }}</p>
+                  <h6 class="text-muted font-weight-normal">{{ cntNoSales }}</h6>
+              </div>
+          </div>
+          <div class="col-lg-8">
+              <div class="row">
+                  <div class="col-md-4">
+                      <h6 class="footer-list-title text-dark mb-3">Services</h6>
+                      <ul class="list-unstyled company-sub-menu">
+                          <!-- <li><a href="">Digital Marketing</a></li> -->
+                          <!-- <li><a href="">Business Analysis</a></li> -->
+                          <li><a href="#">How It Work</a></li>
+                          <li><a href="#features">Features</a></li>
+                          <li><a href="">Ordering Solutions</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <h6 class="footer-list-title text-dark mb-3">About Us</h6>
+                      <ul class="list-unstyled company-sub-menu">
+                          <li><a href="#contact">Contact Us</a></li>
+                          <li><a href="#faq">FAQs</a></li>
+                          <!-- <li><a href="">Blog</a></li> -->
+                          <li><a href="">Privacy Policy</a></li>
+                          <li><a href="">Terms and Conditions</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <h6 class="footer-list-title text-dark mb-3">Our Address</h6>
+                      <p class="text-muted f-14">{{ address }}</p>
+                      <h6 class="text-muted pb-2">Email: {{ email }}</h6>
+                      <ul class="list-unstyled footer-social-list mt-4">
+                          <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
+                          <li class="list-inline-item"><a href="https://bit.ly/welcome2ecuisine" target="_blank" rel="noopener noreferrer"><i class="mdi mdi-instagram"></i></a></li>
+                          <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin"></i></a></li> -->
+                      </ul>
+                  </div>
+              </div>
+          </div>
       </div>
-      <!-- <span id="jegeh">About Us</span>
-      <span id="jegeh">Contact Us</span>
-      <span id="jegeh">Find Us</span> -->
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-      <div class="text-center p-2" >
-        © 2021 Copyright:
-        <a class="text-white" href="https://ecuisine.in/">ecuisine.in</a>
+      <div class="row mt-5 border-top">
+          <div class="col-md-12">
+              <div class="text-center text-muted">
+                  <p class="mb-0 f-15"> 2021 © ECUISINE</p>
+              </div>
+          </div>
       </div>
-    </mat-toolbar-row>
-</mat-toolbar>
+  </div>
+</section>

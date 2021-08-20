@@ -1,0 +1,38 @@
+<section class="section" id="faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="title text-center mb-5">
+          <h3 class="font-weight-bold text-warning">FAQs</h3>
+          <p class="text-muted">Got queries? FAQs are here!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faqs">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-8 col-md-6">
+        <ngb-accordion [closeOthers]="true" [animation]="true" (shown)="startScroll($event)" (panelChange)="panelChange($event)">
+          <ngb-panel *ngFor="let faq of faqs" id="toggle-{{faq.id}}" title="Q:&nbsp;{{faq.q}}">
+            <ng-template ngbPanelContent *ngIf="faq.formatting !== 'points'">
+              <ol type="A">
+                <li class="mx-1 text-custom">{{ faq.a }}</li>
+              </ol>
+            </ng-template>
+            <ng-template ngbPanelContent *ngIf="faq.formatting === 'points'">
+              <ol type="A">
+                <li class="mx-1 text-custom">
+                  <ul type="square">
+                    <li class="text-custom" *ngFor="let point of faq.aP">{{ point }}</li>
+                  </ul>
+                </li>
+              </ol>
+
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </div>
+    </div>
+  </div>
+</section>
