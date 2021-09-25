@@ -15,6 +15,14 @@ import { PricingComponent } from './pricing/pricing.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule, Routes } from '@angular/router';
+import { TermAndConditionComponent } from './term-and-condition/term-and-condition.component';
+
+const appRoutes: Routes = [
+  { path: 'tnc', component: TermAndConditionComponent },
+  { path: '', component: LayoutComponent },
+  { path: '**', component: LayoutComponent },
+]
 
 @NgModule({
   declarations: [
@@ -25,7 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     PricingComponent,
     FaqComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    TermAndConditionComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +45,7 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     NgbAccordionModule,
     ScrollToModule.forRoot(),
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
