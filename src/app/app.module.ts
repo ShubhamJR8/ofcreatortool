@@ -17,8 +17,11 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TermAndConditionComponent } from './term-and-condition/term-and-condition.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 const appRoutes: Routes = [
+  { path: 'cont', component: ContactComponent},
+  { path: 'pp', component: PrivacyPolicyComponent},
   { path: 'tnc', component: TermAndConditionComponent },
   { path: '', component: LayoutComponent },
   { path: '**', component: LayoutComponent },
@@ -35,6 +38,7 @@ const appRoutes: Routes = [
     ContactComponent,
     FooterComponent,
     TermAndConditionComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
