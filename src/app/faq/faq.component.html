@@ -16,9 +16,9 @@
         <ngb-accordion [closeOthers]="true" [animation]="true" (shown)="startScroll($event)" (panelChange)="panelChange($event)">
           <ngb-panel *ngFor="let faq of faqs" id="toggle-{{faq.id}}" title="Q:&nbsp;{{faq.q}}">
             <ng-template ngbPanelContent *ngIf="faq.formatting !== 'points'">
-              <ol type="A">
-                <li class="mx-1 text-custom">{{ faq.a }}</li>
-              </ol>
+              <!-- <ol> -->
+                <p class="mx-1 text-custom">&nbsp;&nbsp;&nbsp;{{ faq.a }}</p>
+              <!-- </ol> -->
             </ng-template>
             <!-- <ng-template ngbPanelContent *ngIf="faq.formatting === 'points'">
               <ol type="A">

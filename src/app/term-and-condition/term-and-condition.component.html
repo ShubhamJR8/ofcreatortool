@@ -1,11 +1,34 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark navbar-light"
+  (window:scroll)="windowScroll()" id="navbar">
+  <div class="container">
+    <!-- LOGO -->
+    <a href="#" class="navbar-brand logo">
+      <img src="assets/ofcreatortoolblack.png" alt="ECUISINE" class="logo-light rounded" height="40">
+      <img src="assets/ofcreatortoolblack.png" alt="ECUISINE" class="logo-dark rounded" height="40">
+    </a>
+    <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="mdi mdi-menu"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">
+        <li class="nav-item">
+          <a [ngxScrollTo]="'#home'" href="javascript: void(0);" class="nav-link"></a>
+        </li>
+      </ul>
+      <div class="">
+        <a target="_blank" href="https://chrome.google.com/webstore/detail/ofcreator-tools/mpajbhniolemnclhffhepggeaokdamkp" class="btn btn-primary font-weight-bold">Get Extenstion</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Navbar end -->
+
 <div class="container">
-  <div class="row justify-content-center align-items-center">
+  <div class="row justify-content-center align-items-center pt-5 mt-5">
     <div class="col-md-8 col-md-offset-2">
       <form name="tandc" ng-submit="approveTandC()">
         <div style="text-align:center;">
-          <a href="#" class="navbar-brand logo">
-            <img src="assets/ofcreatortoolblack.png" alt="ECUISINE" class="logo-light rounded" height="45">
-          </a>
           <h3>TERMS OF SERVICES</h3>
           <br>
           <h6 style="text-align:left">PLEASE READ THIS TERMS OF SERVICE AGREEMENT CAREFULLY, AS IT CONTAINS IMPORTANT

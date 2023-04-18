@@ -19,3 +19,22 @@
   }
 } */
 
+#fanInfo {
+  padding-top: 30px;
+  padding-left: 150px;
+}
+
+#autoFollow {
+  padding-left: 130px;
+  padding-top: 70px;
+}
+
+#vault {
+  padding-left: 100px;
+  /* height: 400px; */
+}
+
+#vault-inner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

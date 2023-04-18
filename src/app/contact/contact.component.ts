@@ -68,4 +68,13 @@ export class ContactComponent implements OnInit {
       })
       .catch(error => this.errorMessage = "Some error occured!")
   }
+
+  windowScroll() {
+    const navbar = document.getElementById('navbar') as HTMLElement;
+    if (document.body.scrollTop >= 90 || document.documentElement.scrollTop > 90) {
+      navbar.classList.add('nav-sticky');
+    } else {
+      navbar.classList.remove('nav-sticky');
+    }
+  }
 }

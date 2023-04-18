@@ -12,14 +12,14 @@ export class FaqComponent implements OnInit {
   faqs = [
     {
       id: 1,
-      q: "Are there any limits on how many people I can follow ?",
-      a: "Onlyfans only allows you to follow a limited number of people per day(approximately 100 per day). We stay within those limits so your account stays safe!",
+      q: "What is ofcreatortools?",
+      a: "Ofcreatortools is a one of a kind extension that helps you manage your onlyfans like the top creators. We have a ton of features to help you make more money, and save hours of your time everyday!",
       formatting: "none",
     },
     {
       id: 2,
-      q: "Will this tool find all of my expired fans ?",
-      a: "This tool can detect all your expired fans, but it won't automatically follow all of them back due to various reasons. For instance, some accounts may have disabled their following option, while others could be inactive. Attempting to follow such accounts would be a waste of time. Instead, this tool exclusively follows accounts that are free to subscribe to, ensuring that you don't get charged anything on your OnlyFans account.",
+      q: "Is it safe to use?",
+      a: "Our extension is COMPLETELY safe to use, we take this topic very seriously. No creator has been penalised for using our extension as it is impossible to detect, since we act like a real user( like clicking a profile). We don't have any access to your content, not do we need your password or financial details to make our extension work Compared to other tools, we are the safest tool on the market.",
       formatting: "none",
     },
     {
@@ -35,8 +35,8 @@ export class FaqComponent implements OnInit {
     },
     {
       id: 4,
-      q: "Does it take any money from my OnlyFans account ?",
-      a: "No, we only follow accounts that are free to subscribe to, so you wont get charged anything.",
+      q: "Is it free or paid?",
+      a: "It is a paid chrome extension with some free features.",
       formatting: "none",
     },
     {
@@ -54,7 +54,7 @@ export class FaqComponent implements OnInit {
     {
       id: 7,
       q: "Does it work for multiple accounts ?",
-      a: "You need to buy multiple subscriptions if you have multiple accounts, with each subscription tied to a specific account. If you require more than 5 license keys, we will provide you with a discount, just get in touch with us at support@ofcreatortools.com.",
+      a: "You need to buy multiple subscriptions if you have multiple accounts, with each subscription tied to a specific account.",
       formatting: "none",
     },
   ]
